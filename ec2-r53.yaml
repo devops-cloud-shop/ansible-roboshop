@@ -7,8 +7,8 @@
     zone_id: "Z03076873JCXQT5FHA6WQ" # replace with your hosted zone ID
     domain_name: "prav4cloud.online"
     # we can pass instances through command line using -e
-    instances: 
-    - mongodb
+    # instances: 
+    # - mongodb
     # - redis
     # - mysql
     # - rabbitmq
