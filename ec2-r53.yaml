@@ -3,7 +3,7 @@
   connection: local
   vars:
     ami_id: ami-0220d79f3f480ecf5
-    #sg_id: sg-0d1e7fa540ce10c1d # replace with your SG ID
+    sg_id: sg-0d1e7fa540ce10c1d # replace with your SG ID
     zone_id: "Z07156123N66DZ6JZ182I" # replace with your hosted zone ID
     domain_name: "prav4cloud.online"
     # we can pass instances through command line using -e
@@ -17,8 +17,7 @@
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       instance_type: t3.micro
-      security_group_ids:
-      - "{{ sg_id }}"
+      security_group: "{{ sg_id }}"
       vpc_subnet_id: subnet-0859ee1a076579fd8
       image_id: "{{ ami_id }}"
       tags:
