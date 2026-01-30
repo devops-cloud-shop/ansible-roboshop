@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars:
-    ami_id: ami-09c813fb71547fc4f
-    sg_id: sg-097ab76e8d557c4b9 # replace with your SG ID
-    zone_id: "Z03076873JCXQT5FHA6WQ" # replace with your hosted zone ID
+    ami_id: ami-0220d79f3f480ecf5
+    sg_id: sg-0aa39648ecb400f16 # replace with your SG ID
+    zone_id: "Z07156123N66DZ6JZ182I" # replace with your hosted zone ID
     domain_name: "prav4cloud.online"
     # we can pass instances through command line using -e
     instances: 
