@@ -18,7 +18,7 @@
       name: "{{ item }}"
       instance_type: t3.micro
       security_group_ids:
-      - sg-0d1e7fa540ce10c1d
+      - "{{ sg_id }}"
       vpc_subnet_id: subnet-0859ee1a076579fd8
       image_id: "{{ ami_id }}"
       tags:
