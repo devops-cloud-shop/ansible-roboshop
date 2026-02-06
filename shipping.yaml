@@ -1,0 +1,21 @@
+- name: set up shipping server
+  hosts: shipping
+  become: yes
+  tasks:
+  - name: Install maven
+    ansible.builtin.dnf:
+      name: "{{ item }}"
+      state: present
+    loop:
+    - maven
+    - mysql
+
+  - name: create roboshop system user
+    ansible.builtin.user:
+      name: roboshop
+      home: /app
+      system: true
+      comment: "roboshop system user" 
+      shell: /sbin/nologin
+
+  
